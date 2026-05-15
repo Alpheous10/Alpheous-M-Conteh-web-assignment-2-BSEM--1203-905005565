@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAgri SL - Tablet & Mobile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- RESET & BASIC STYLES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, sans-serif; }
+        body { background-color: #f4f6f4; color: #333; line-height: 1.5; padding: 0 10px; }
+        .container { max-width: 768px; margin: 0 auto; background: #fff; border: 1px solid #dcdcdc; }
+
+        /* --- HEADER --- */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #e2e8f0; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: #2e7d32; display: flex; align-items: center; gap: 8px; }
+        .menu-toggle { font-size: 1.4rem; background: none; border: none; cursor: pointer; }
+
+        /* --- HERO SECTION (STACKED) --- */
+        .hero { background: #e8f5e9; padding: 30px 15px; text-align: center; border-bottom: 1px solid #c8e6c9; }
+        .hero-img { width: 100%; max-width: 550px; aspect-ratio: 16/10; object-fit: cover; border-radius: 6px; margin-bottom: 20px; }
+        .hero h1 { font-size: 1.8rem; color: #1b5e20; line-height: 1.3; margin-bottom: 15px; }
+        .btn-search { display: inline-block; background: #2e7d32; color: #fff; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-decoration: none; }
+
+        /* --- FEATURE BLOCKS --- */
+        .features { padding: 30px 15px; }
+        .features-title { font-size: 1.1rem; text-transform: uppercase; color: #718096; margin-bottom: 20px; font-weight: bold; }
+        
+        /* Default: Tablet 2x3 Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .card { border: 1px solid #e2e8f0; border-radius: 6px; padding: 15px; display: flex; gap: 12px; background: #fff; }
+        .icon { font-size: 1.3rem; color: #2e7d32; background: #e8f5e9; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .text h3 { font-size: 0.9rem; text-transform: uppercase; color: #1a202c; margin-bottom: 4px; }
+        .text p { font-size: 0.8rem; color: #718096; }
+
+        /* --- FOOTER LAYOUTS --- */
+        footer { background: #e8f5e9; padding: 20px 15px; border-top: 1px solid #c8e6c9; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+        .footer-col h4 { font-size: 0.85rem; color: #1b5e20; margin-bottom: 10px; }
+        .line { height: 6px; background: #cbd5e0; margin-bottom: 6px; border-radius: 2px; width: 80%; }
+        .copy { text-align: center; font-size: 0.75rem; color: #718096; border-top: 1px solid #c8e6c9; padding-top: 15px; }
+
+        /* ==========================================
+           PHONE MOBILE VIEW BREAKPOINT (< 550px)
+           ========================================== */
+        @media (max-width: 550px) {
+            .hero h1 { font-size: 1.5rem; }
+            
+            /* Feature grid collapses to a single column list stack */
+            .grid { grid-template-columns: 1fr; gap: 12px; }
+            
+            /* Footer columns collapse to an Accordion layout representation */
+            .footer-grid { grid-template-columns: 1fr; gap: 0; }
+            .footer-col { border-bottom: 1px solid #c8e6c9; padding: 10px 0; }
+            .footer-col h4 { display: flex; justify-content: space-between; margin-bottom: 0; }
+            .footer-col h4::after { content: '+'; font-size: 1rem; color: #2e7d32; }
+            .footer-col .line { display: none; } /* Collapses detail lines on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><i class="fa-solid fa-tractor"></i> SmartAgri SL</div>
+            <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </header>
+
+        <section class="hero">
+            <img class="hero-img" src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Farming">
+            <h1>Access Real-Time Data & Modern Farming Methods</h1>
+            <a href="#" class="btn-search">Find Best Market Prices</a>
+        </section>
+
+        <section class="features">
+            <div class="features-title">Feature Blocks</div>
+            <div class="grid">
+                <div class="card"><div class="icon"><i class="fa-solid fa-wheat-awn"></i></div><div class="text"><h3>Daily Market Price Hub</h3><p>Wholesale crop pricing across major SL districts</p></div></div>
+                <div class="card"><div class="icon"><i class="fa-solid fa-temperature-half"></i></div><div class="text"><h3>Local Weather Alerts</h3><p>Wholesale crop pricing alerts</p></div></div>
+                <div class="card"><div class="icon"><i class="fa-solid fa-bug"></i></div><div class="text"><h3>Pest & Disease Diagnostics</h3><p>Pest & disease diagnostics</p></div></div>
+                <div class="card"><div class="icon"><i class="fa-solid fa-mobile-screen"></i></div><div class="text"><h3>Extension Service Videos</h3><p>Extension service videos</p></div></div>
+                <div class="card"><div class="icon"><i class="fa-solid fa-seedling"></i></div><div class="text"><h3>Agri-Inputs & Suppliers</h3><p>Wholesale crop pricing across major</p></div></div>
+                <div class="card"><div class="icon"><i class="fa-solid fa-volume-high"></i></div><div class="text"><h3>Audio Guides (Local Lang)</h3><p>Audio guides (local lang)</p></div></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col"><h4>About</h4><div class="line"></div><div class="line"></div></div>
+                <div class="footer-col"><h4>Services</h4><div class="line"></div><div class="line"></div></div>
+                <div class="footer-col"><h4>Resources</h4><div class="line"></div><div class="line"></div></div>
+                <div class="footer-col"><h4>Contact</h4><div class="line"></div><div class="line"></div></div>
+            </div>
+            <div class="copy">&copy; 2026 SmartAgri SL. All rights reserved.</div>
+        </footer>
+    </div>
+
+</body>
+</html>
